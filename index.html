@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -7,9 +6,10 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-   content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0">
 
 <title>Anthony ♡ Nadia</title>
+
 
 <style>
 
@@ -94,7 +94,6 @@ body{
 
     border-radius:50%;
 }
-
 
 .cloud1{
 
@@ -666,7 +665,6 @@ h2{
 
     object-fit:cover;
 
-
     border-radius:10px;
 
     display:block;
@@ -698,7 +696,7 @@ h2{
 
 
 /* =====================================================
-   PANTALLA DE ESPECIFICACIONES
+   ESPECIFICACIONES
 ===================================================== */
 
 .spec-card{
@@ -735,9 +733,6 @@ h2{
             .16
         );
 }
-
-
-/* Título */
 
 .spec-card .small{
 
@@ -1038,65 +1033,6 @@ h2{
 
 
 /* =====================================================
-   MUSICA
-===================================================== */
-
-.music{
-
-    position:fixed;
-
-    bottom:18px;
-
-    right:18px;
-
-    background:white;
-
-    border-radius:40px;
-
-    padding:
-        8px 14px 8px 8px;
-
-    display:none;
-
-    align-items:center;
-
-    gap:8px;
-
-    box-shadow:
-        0 8px 25px
-        rgba(
-            0,
-            0,
-            0,
-            .12
-        );
-
-    z-index:100;
-
-    color:#718690;
-
-    font-size:11px;
-}
-
-.music button{
-
-    width:38px;
-
-    height:38px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#ed6677;
-
-    color:white;
-
-    cursor:pointer;
-}
-
-
-/* =====================================================
    CORAZONES
 ===================================================== */
 
@@ -1218,7 +1154,9 @@ h2{
 }
 
 
-/* celulares pequeños */
+/* =====================================================
+   CELULARES PEQUEÑOS
+===================================================== */
 
 @media(
     max-height:700px
@@ -1257,9 +1195,12 @@ h2{
 
 </head>
 
+
 <body>
 
+
 <div class="page">
+
 
 <!-- =====================================================
      DECORACIONES
@@ -1285,6 +1226,7 @@ h2{
     ✧
 </div>
 
+
 <!-- =====================================================
      PANTALLA 1
 ===================================================== -->
@@ -1296,46 +1238,51 @@ h2{
 
 <div class="card">
 
+    <h1>
 
-<h1>
+        Anthony
 
-    Anthony
-    <span class="heart">
-        ♡
-    </span>
+        <span class="heart">
+            ♡
+        </span>
 
-</h1>
+    </h1>
 
-<div class="date">
 
-    30 · 09 · 2026
+    <div class="date">
 
-</div>
+        30 · 09 · 2026
 
-<p class="text">
+    </div>
 
-    Tengo una pequeña sorpresa
-    preparada especialmente para ti.
 
-    <br><br>
+    <p class="text">
 
-    ¿Listo para abrirla? 🏎️
+        Tengo una pequeña sorpresa
+        preparada especialmente para ti.
 
-</p>
+        <br><br>
 
-<button
-    class="button"
-    onclick="nextScreen()"
->
+        ¿Listo para abrirla? 🏎️
 
-    🏎️ ABRIR MI REGALO
+    </p>
 
-</button>
-```
+
+    <!-- ESTE CLIC INICIA LA CANCIÓN -->
+
+    <button
+        class="button"
+        onclick="openGift()"
+    >
+
+        🏎️ ABRIR MI REGALO
+
+    </button>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      PANTALLA 2
@@ -1348,63 +1295,67 @@ h2{
 
 <div class="card">
 
-```
-<div class="small">
-    DIA DE HOT WHEELS 
-</div>
+    <div class="small">
 
-<h2>
+        DÍA DE HOT WHEELS
 
-    Hoy quería darte
-    <span class="heart">
-        un Hot Wheels
-    </span>
-
-</h2>
-
-<p class="text">
-
-    Pero hay un pequeño detalle...
-
-    <br><br>
-
-    Estás lejos de mí. 🥹
-
-</p>
-
-
-<div class="car-area">
-
-    <div class="road"></div>
-
-    <div class="car">
-        🏎️
     </div>
 
-</div>
+
+    <h2>
+
+        Hoy quería darte
+
+        <span class="heart">
+            un Hot Wheels
+        </span>
+
+    </h2>
 
 
-<p class="text">
+    <p class="text">
 
-    Así que decidí dartelo 
-    uno de una manera diferente. ❤️
+        Pero hay un pequeño detalle...
 
-</p>
+        <br><br>
+
+        Estás lejos de mí. 🥹
+
+    </p>
 
 
-<button
-    class="button"
-    onclick="nextScreen()"
->
+    <div class="car-area">
 
-    CONTINUAR ♡
+        <div class="road"></div>
 
-</button>
-```
+        <div class="car">
+            🏎️
+        </div>
+
+    </div>
+
+
+    <p class="text">
+
+        Así que decidí dártelo
+        de una manera diferente. ❤️
+
+    </p>
+
+
+    <button
+        class="button"
+        onclick="nextScreen()"
+    >
+
+        CONTINUAR ♡
+
+    </button>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      PANTALLA 3
@@ -1417,83 +1368,83 @@ h2{
 
 <div>
 
-```
-<div class="small">
-    MI AMOR  
-</div>
+    <div class="small">
 
-<h2>
+        MI AMOR
 
-    Tu pequeño
-    <span class="heart">
-        regalo
-    </span>
-
-</h2>
+    </div>
 
 
-<div class="collector">
+    <h2>
 
-    <div class="collector-inner">
+        Tu pequeño
+
+        <span class="heart">
+            regalo
+        </span>
+
+    </h2>
 
 
-        <div class="collector-top">
+    <div class="collector">
 
-            <div class="logo">
-                HOT WHEELS
+        <div class="collector-inner">
+
+
+            <div class="collector-top">
+
+                <div class="logo">
+                    HOT WHEELS
+                </div>
+
+                <div class="edition">
+                    EDICIÓN ESPECIAL
+                </div>
+
             </div>
 
-            <div class="edition">
-                EDICION ESPECIAL 
+
+            <div class="photo">
+
+                <img
+                    src="anto.jpeg"
+                    alt="Anthony"
+                >
+
             </div>
 
-        </div>
+
+            <div class="names">
+
+                Anthony ♡ Nadia
+
+            </div>
 
 
-        <div class="photo">
+            <div class="limited">
 
-            <img
-                src="anto.jpeg"
-                alt="Anthony"
-                width: 350px;
+                UN AMOR PARA TODA LA VIDA
 
-
-            >
-
-        </div>
-
-
-        <div class="names">
-
-            Anthony ♡ Nadia
-
-        </div>
-
-
-        <div class="limited">
-
-            UN AMOR PARA TODA LA VIDA 
+            </div>
 
         </div>
 
     </div>
 
-</div>
 
+    <button
+        class="button"
+        onclick="nextScreen()"
+    >
 
-<button
-    class="button"
-    onclick="nextScreen()"
->
+        VER ESPECIFICACIONES →
 
-    VER ESPECIFICACIONES →
-
-</button>
-```
+    </button>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      PANTALLA 4
@@ -1506,138 +1457,135 @@ h2{
 
 <div class="spec-card">
 
-```
-<div class="small">
 
-    ESPECIFICACIONES TÉCNICAS
+    <div class="small">
 
-</div>
+        ESPECIFICACIONES TÉCNICAS
 
-
-<h2>
-
-    Anthony
-    <span class="heart">
-        Edición 
-    </span>
-
-</h2>
+    </div>
 
 
-<!-- FOTO DEL CARRITO -->
+    <h2>
 
-<div class="car-photo">
+        Anthony
 
-    <img
-        src="carrito.png"
-        alt="Hot Wheels"
+        <span class="heart">
+            Edición
+        </span>
+
+    </h2>
+
+
+    <div class="car-photo">
+
+        <img
+            src="carrito.png"
+            alt="Hot Wheels"
+        >
+
+    </div>
+
+
+    <div class="spec-line"></div>
+
+
+    <div class="specs">
+
+
+        <div class="spec">
+
+            <span>
+                MODELO
+            </span>
+
+            <strong>
+                Anthony
+            </strong>
+
+        </div>
+
+
+        <div class="spec">
+
+            <span>
+                EDICIÓN
+            </span>
+
+            <strong>
+                Nadia ♡
+            </strong>
+
+        </div>
+
+
+        <div class="spec">
+
+            <span>
+                MOTOR
+            </span>
+
+            <strong>
+                Amor infinito
+            </strong>
+
+        </div>
+
+
+        <div class="spec">
+
+            <span>
+                COMBUSTIBLE
+            </span>
+
+            <strong>
+                Besitos y abrazos
+            </strong>
+
+        </div>
+
+
+        <div class="spec">
+
+            <span>
+                VELOCIDAD
+            </span>
+
+            <strong>
+                Directo hacia ti
+            </strong>
+
+        </div>
+
+
+        <div class="spec">
+
+            <span>
+                DISTANCIA
+            </span>
+
+            <strong>
+                0 km del corazón ❤️
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+    <button
+        class="button"
+        onclick="nextScreen()"
     >
 
-</div>
+        HAY ALGO MÁS... →
 
-
-<div class="spec-line"></div>
-
-
-<!-- ESPECIFICACIONES -->
-
-<div class="specs">
-
-
-    <div class="spec">
-
-        <span>
-            MODELO
-        </span>
-
-        <strong>
-            Anthony
-        </strong>
-
-    </div>
-
-
-    <div class="spec">
-
-        <span>
-            EDICIÓN
-        </span>
-
-        <strong>
-            Nadia ♡
-        </strong>
-
-    </div>
-
-
-    <div class="spec">
-
-        <span>
-            MOTOR
-        </span>
-
-        <strong>
-            Amor infinito
-        </strong>
-
-    </div>
-
-
-    <div class="spec">
-
-        <span>
-            COMBUSTIBLE
-        </span>
-
-        <strong>
-            Besitos y abrazos
-        </strong>
-
-    </div>
-
-
-    <div class="spec">
-
-        <span>
-            VELOCIDAD
-        </span>
-
-        <strong>
-            Directo hacia ti
-        </strong>
-
-    </div>
-
-
-    <div class="spec">
-
-        <span>
-            DISTANCIA
-        </span>
-
-        <strong>
-            0 km del corazón ❤️
-        </strong>
-
-    </div>
-
-
-</div>
-
-
-<button
-    class="button"
-    onclick="nextScreen()"
->
-
-    HAY ALGO MÁS... →
-
-</button>
-```
+    </button>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      PANTALLA 5
@@ -1650,106 +1598,123 @@ h2{
 
 <div>
 
-```
-<div class="small">
-    PARA TI ♡
-</div>
 
-<h2>
+    <div class="small">
 
-    Una pequeña
-    <span class="heart">
-        carta
-    </span>
-
-</h2>
-
-
-<div class="letter">
-
-
-    <p>
-        Anthony, Amor de mi vida
-    </p>
-
-
-    <p>
-
-        Hoy es un dia muy especial
-        y quería darte un Hot Wheels,
-        pero como estás lejitos,
-        decidí buscar una manera diferente
-        de hacerte llegar mi regalo a mi estilo ing jeje
-
-    </p>
-
-
-    <p>
-
-        Aunque la distancia exista,
-        nunca te dejare ser espectador
-        
-    </p>
-
-    <p>
-
-        Dicen que los Hot Wheels son para coleccionar carros, 
-        pero yo creo que también son para recordar caminos y momentos,
-        hoy quiero recordarte el increible persona que eres
-        y si pudiera elegir un camino para recorrer una y otra vez.
-        elegiría cualquiera que me lleve hacia ti. 🥹❤️
-        
-        
-    </p>
-    <p>
-
-        Aunque hoy no pueda estar contigo,
-        quería que tuvieras un pequeño
-        recordatorio de que hay alguien
-        que piensa en ti y que siempre
-        encuentra una manera de estar
-        cerquita mi goido.
-
-    </p>
-
-
-    <p>
-
-        Espero que cuando veas esto
-        sonrías, porque esa era justamente
-        mi intención, recuerda tejamoooooooo por toda la vida. ❤️🏎️
-
-    </p>
-
-
-    <div class="signature">
-
-        Con amor,<br>
-
-        Nadia ♡
+        PARA TI ♡
 
     </div>
 
 
-</div>
+    <h2>
+
+        Una pequeña
+
+        <span class="heart">
+            carta
+        </span>
+
+    </h2>
 
 
-<button
-    class="button"
-    onclick="nextScreen()"
->
+    <div class="letter">
 
-    ÚLTIMA SORPRESA ❤️
 
-</button>
-```
+        <p>
+            Anthony, Amor de mi vida ❤️
+        </p>
+
+
+        <p>
+
+            Hoy es un día muy especial
+            y quería darte un Hot Wheels,
+            pero como estás lejitos,
+            decidí buscar una manera diferente
+            de hacerte llegar mi regalo,
+            a mi estilo, ing jeje.
+
+        </p>
+
+
+        <p>
+
+            Aunque la distancia exista,
+            nunca te dejaré ser espectador.
+
+        </p>
+
+
+        <p>
+
+            Dicen que los Hot Wheels son para
+            coleccionar carros, pero yo creo que
+            también son para recordar caminos
+            y momentos.
+
+            <br><br>
+
+            Hoy quiero recordarte la increíble
+            persona que eres y, si pudiera elegir
+            un camino para recorrer una y otra vez,
+            elegiría cualquiera que me lleve hacia ti. 🥹❤️
+
+        </p>
+
+
+        <p>
+
+            Aunque hoy no pueda estar contigo,
+            quería que tuvieras un pequeño
+            recordatorio de que hay alguien
+            que piensa en ti y que siempre
+            encuentra una manera de estar
+            cerquita de mi goido.
+
+        </p>
+
+
+        <p>
+
+            Espero que cuando veas esto
+            sonrías, porque esa era justamente
+            mi intención.
+
+            <br><br>
+
+            Recuerda: tejamoooooooo por toda la vida. ❤️🏎️
+
+        </p>
+
+
+        <div class="signature">
+
+            Con amor,<br>
+
+            Nadia ♡
+
+        </div>
+
+
+    </div>
+
+
+    <button
+        class="button"
+        onclick="nextScreen()"
+    >
+
+        ÚLTIMA SORPRESA ❤️
+
+    </button>
 
 </div>
 
 </section>
 
+
 <!-- =====================================================
-     PANTALLA 6 — FINAL
+     PANTALLA 6
 ===================================================== -->
 
 <section
@@ -1759,165 +1724,239 @@ h2{
 
 <div class="final-card">
 
-```
-<div class="big-heart">
 
-    ❤️
+    <div class="big-heart">
 
-</div>
-
-
-<div class="small">
-
-    DELIVERY COMPLETO 
-
-</div>
-
-
-<h2>
-
-    Anthony & Nadia
-
-</h2>
-
-
-<p class="final-text">
-
-    Muchos kilómetros de distancia...
-
-    <br><br>
-
-    pero cero kilómetros
-    entre nuestros corazones.
-
-</p>
-
-
-<!-- CARRITO -->
-
-<div class="car-area">
-
-    <div class="road"></div>
-
-    <div class="car">
-
-        🏎️
+        ❤️
 
     </div>
 
-</div>
+
+    <div class="small">
+
+        DELIVERY COMPLETADO
+
+    </div>
 
 
-<p class="final-text">
+    <h2>
 
-    30 · 09 · 2026
+        Anthony & Nadia
 
-</p>
-
-
-<br>
+    </h2>
 
 
-<p
-    style="
-    color:#8a9da5;
-    font-size:12px;
-    "
->
+    <p class="final-text">
 
-   Tu inge fav Nadia 👩🏻‍💻
+        Muchos kilómetros de distancia...
 
-</p>
-```
+        <br><br>
+
+        pero cero kilómetros
+        entre nuestros corazones.
+
+    </p>
+
+
+    <div class="car-area">
+
+        <div class="road"></div>
+
+        <div class="car">
+
+            🏎️
+
+        </div>
+
+    </div>
+
+
+    <p class="final-text">
+
+        30 · 09 · 2026
+
+    </p>
+
+
+    <br>
+
+
+    <p
+        style="
+        color:#8a9da5;
+        font-size:12px;
+        "
+    >
+
+        Tu inge fav Nadia 👩🏻‍💻
+
+    </p>
 
 </div>
 
 </section>
 
+
+</div>
+
+
 <!-- =====================================================
-     REPRODUCTOR
+     REPRODUCTOR DE YOUTUBE OCULTO
 ===================================================== -->
 
 <div
-    class="music"
-    id="musicBox"
->
+    id="youtubePlayer"
+    style="
+        position:fixed;
+        width:1px;
+        height:1px;
+        left:-100px;
+        top:-100px;
+        opacity:0;
+        pointer-events:none;
+        overflow:hidden;
+    "
+></div>
 
-```
-<button
-    id="musicButton"
-    onclick="toggleMusic()"
->
 
-    ▶
+<!-- =====================================================
+     API OFICIAL DE YOUTUBE
+===================================================== -->
 
-</button>
+<script src="https://www.youtube.com/watch?v=p1JmzB6E-C8&list=RDp1JmzB6E-C8&start_radio=1"></script>
 
 
-<span>
-
-    nuestra canción ♡
-
-</span>
-```
-
-</div>
-
-<!-- AUDIO -->
-
-<audio
-id="music"
-loop
-
->
-
-```
-<source
-    src="https://www.youtube.com/watch?v=eOutGxgSAPA"
-    type="audio/mpeg"
->
-```
-
-</audio>
-
-</div>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
 
-/* =====================================================
-   VARIABLES
-===================================================== */
-
 let currentScreen = 1;
 
-const music =
-    document.getElementById(
-        "music"
-    );
+let player = null;
 
-const musicBox =
-    document.getElementById(
-        "musicBox"
-    );
+let youtubeReady = false;
 
-const musicButton =
-    document.getElementById(
-        "musicButton"
-    );
+let musicRequested = false;
 
 
 /* =====================================================
-   CAMBIAR DE PANTALLA
+   YOUTUBE ESTÁ LISTO
 ===================================================== */
 
-function nextScreen(){
+function onYouTubeIframeAPIReady() {
 
+    player = new YT.Player(
+        "youtubePlayer",
+        {
+
+            height: "1",
+
+            width: "1",
+
+            videoId: "p1JmzB6E-C8",
+
+            playerVars: {
+
+                autoplay: 0,
+
+                controls: 0,
+
+                loop: 1,
+
+                playlist: "p1JmzB6E-C8",
+
+                rel: 0,
+
+                playsinline: 1
+
+            },
+
+            events: {
+
+                onReady: function(event) {
+
+                    youtubeReady = true;
+
+
+                    /*
+                    Si Anthony ya hizo clic
+                    mientras YouTube cargaba,
+                    comenzamos la canción.
+                    */
+
+                    if (musicRequested) {
+
+                        event.target.unMute();
+
+                        event.target.setVolume(60);
+
+                        event.target.playVideo();
+
+                        musicRequested = false;
+
+                    }
+
+                }
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ABRIR REGALO + MÚSICA
+===================================================== */
+
+function openGift() {
+
+
+    /*
+    Registramos el clic.
+    */
+
+    musicRequested = true;
+
+
+    /*
+    Si YouTube ya terminó de cargar,
+    reproducimos inmediatamente.
+    */
+
+    if (
+        youtubeReady &&
+        player
+    ) {
+
+        player.unMute();
+
+        player.setVolume(60);
+
+        player.playVideo();
+
+        musicRequested = false;
+
+    }
+
+
+    /*
+    CAMBIO DE PANTALLA
+    */
 
     const current =
         document.getElementById(
-            "screen" +
-            currentScreen
+            "screen1"
+        );
+
+
+    const next =
+        document.getElementById(
+            "screen2"
         );
 
 
@@ -1932,7 +1971,77 @@ function nextScreen(){
 
 
     setTimeout(
-        function(){
+        function() {
+
+
+            current.style.display =
+                "none";
+
+
+            current.classList.remove(
+                "exit"
+            );
+
+
+            next.style.display =
+                "flex";
+
+
+            setTimeout(
+                function() {
+
+                    next.classList.add(
+                        "active"
+                    );
+
+                },
+                30
+            );
+
+
+        },
+        600
+    );
+
+
+    createHeartBurst();
+
+}
+
+
+/* =====================================================
+   SIGUIENTES PANTALLAS
+===================================================== */
+
+function nextScreen() {
+
+
+    const current =
+        document.getElementById(
+            "screen" +
+            currentScreen
+        );
+
+
+    if (!current) {
+
+        return;
+
+    }
+
+
+    current.classList.remove(
+        "active"
+    );
+
+
+    current.classList.add(
+        "exit"
+    );
+
+
+    setTimeout(
+        function() {
 
 
             current.style.display =
@@ -1954,14 +2063,15 @@ function nextScreen(){
                 );
 
 
-            if(next){
+            if (next) {
+
 
                 next.style.display =
                     "flex";
 
 
                 setTimeout(
-                    function(){
+                    function() {
 
                         next.classList.add(
                             "active"
@@ -1973,72 +2083,12 @@ function nextScreen(){
 
             }
 
-
         },
         600
     );
 
 
     createHeartBurst();
-
-
-    /* Música */
-
-    if(currentScreen === 1){
-
-        musicBox.style.display =
-            "flex";
-
-
-        music.play()
-            .then(
-                function(){
-
-                    musicButton.innerHTML =
-                        "❚❚";
-
-                }
-            )
-            .catch(
-                function(){
-
-                    musicButton.innerHTML =
-                        "▶";
-
-                }
-            );
-
-    }
-
-}
-
-
-/* =====================================================
-   MUSICA
-===================================================== */
-
-function toggleMusic(){
-
-
-    if(
-        music.paused
-    ){
-
-        music.play();
-
-        musicButton.innerHTML =
-            "❚❚";
-
-    }
-
-    else{
-
-        music.pause();
-
-        musicButton.innerHTML =
-            "▶";
-
-    }
 
 }
 
@@ -2047,14 +2097,15 @@ function toggleMusic(){
    CORAZONES
 ===================================================== */
 
-function createHeartBurst(){
+function createHeartBurst() {
 
 
-    for(
-        let i=0;
-        i<8;
+    for (
+        let i = 0;
+        i < 8;
         i++
-    ){
+    ) {
+
 
         const heart =
             document.createElement(
@@ -2103,7 +2154,6 @@ function createHeartBurst(){
 
 
         heart.style.fontSize =
-
             (
                 15
                 +
@@ -2116,7 +2166,6 @@ function createHeartBurst(){
 
 
         heart.style.animationDuration =
-
             (
                 4
                 +
@@ -2134,7 +2183,7 @@ function createHeartBurst(){
 
 
         setTimeout(
-            function(){
+            function() {
 
                 heart.remove();
 
@@ -2148,6 +2197,7 @@ function createHeartBurst(){
 
 
 </script>
+
 
 </body>
 
