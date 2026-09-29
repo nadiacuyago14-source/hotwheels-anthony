@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+   content="width=device-width, initial-scale=1.0">
+
+<title>Anthony ♡ Nadia</title>
+
+<style>
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    overflow:hidden;
+
+    color:#456778;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff6ff,
+            #fffdf8,
+            #ffeef1
+        );
+}
+
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+===================================================== */
+
+.page{
+
+    width:100vw;
+
+    height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+/* =====================================================
+   NUBES
+===================================================== */
+
+.cloud{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:100px;
+
+    opacity:.75;
+
+    z-index:0;
+}
+
+.cloud::before,
+.cloud::after{
+
+    content:"";
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50%;
+}
+
+
+.cloud1{
+
+    width:170px;
+
+    height:45px;
+
+    top:80px;
+
+    left:-30px;
+}
+
+.cloud1::before{
+
+    width:65px;
+
+    height:65px;
+
+    left:30px;
+
+    top:-30px;
+}
+
+.cloud1::after{
+
+    width:75px;
+
+    height:75px;
+
+    left:90px;
+
+    top:-38px;
+}
+
+
+.cloud2{
+
+    width:160px;
+
+    height:40px;
+
+    bottom:100px;
+
+    right:-30px;
+}
+
+.cloud2::before{
+
+    width:60px;
+
+    height:60px;
+
+    left:25px;
+
+    top:-28px;
+}
+
+.cloud2::after{
+
+    width:70px;
+
+    height:70px;
+
+    right:20px;
+
+    top:-35px;
+}
+
+
+/* =====================================================
+   ESTRELLITAS
+===================================================== */
+
+.sparkle{
+
+    position:absolute;
+
+    color:#e9b74f;
+
+    font-size:22px;
+
+    animation:
+        sparkle 2s infinite alternate;
+
+    z-index:1;
+}
+
+.s1{
+    top:18%;
+    left:12%;
+}
+
+.s2{
+    top:30%;
+    right:13%;
+
+    animation-delay:.5s;
+}
+
+.s3{
+    bottom:22%;
+    left:17%;
+
+    animation-delay:1s;
+}
+
+.s4{
+    bottom:15%;
+    right:18%;
+
+    animation-delay:1.5s;
+}
+
+@keyframes sparkle{
+
+    from{
+
+        opacity:.3;
+
+        transform:
+            scale(.8)
+            rotate(0deg);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1.2)
+            rotate(20deg);
+    }
+}
+
+
+/* =====================================================
+   PANTALLAS
+===================================================== */
+
+.screen{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    opacity:0;
+
+    transform:
+        translateX(60px);
+
+    transition:
+
+        opacity .6s ease,
+
+        transform .6s ease;
+
+    z-index:5;
+}
+
+.screen.active{
+
+    display:flex;
+
+    opacity:1;
+
+    transform:
+        translateX(0);
+}
+
+.screen.exit{
+
+    opacity:0;
+
+    transform:
+        translateX(-60px);
+}
+
+
+/* =====================================================
+   TARJETA GENERAL
+===================================================== */
+
+.card{
+
+    width:min(92%,620px);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .90
+        );
+
+    border:
+        2px solid white;
+
+    border-radius:35px;
+
+    padding:45px 30px;
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(
+            69,
+            130,
+            155,
+            .15
+        );
+
+    backdrop-filter:
+        blur(10px);
+
+    position:relative;
+
+    z-index:3;
+}
+
+
+/* =====================================================
+   TEXTOS
+===================================================== */
+
+.small{
+
+    color:#e75e70;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+}
+
+h1{
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            45px,
+            9vw,
+            75px
+        );
+
+    color:#407793;
+
+    margin-bottom:10px;
+}
+
+h2{
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            32px,
+            7vw,
+            55px
+        );
+
+    color:#407793;
+
+    margin-bottom:20px;
+}
+
+.heart{
+
+    color:#eb6374;
+}
+
+.text{
+
+    color:#708792;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    max-width:530px;
+
+    margin:auto;
+}
+
+.date{
+
+    display:inline-block;
+
+    padding:
+        8px 18px;
+
+    border-radius:30px;
+
+    background:#fff0f2;
+
+    color:#df5e6e;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin:
+        15px 0 25px;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.button{
+
+    margin-top:30px;
+
+    border:none;
+
+    padding:
+        16px 32px;
+
+    border-radius:40px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ef6274,
+            #f48a95
+        );
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    box-shadow:
+
+        0 10px 25px
+        rgba(
+            239,
+            98,
+            116,
+            .30
+        );
+
+    transition:.3s;
+}
+
+.button:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+    box-shadow:
+
+        0 14px 30px
+        rgba(
+            239,
+            98,
+            116,
+            .40
+        );
+}
+
+
+/* =====================================================
+   CARRETERA
+===================================================== */
+
+.car-area{
+
+    width:100%;
+
+    height:120px;
+
+    margin:
+        30px 0;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.road{
+
+    position:absolute;
+
+    width:120%;
+
+    height:70px;
+
+    left:-10%;
+
+    bottom:5px;
+
+    background:#b7c7ce;
+
+    transform:
+        rotate(-1deg);
+
+    border-top:
+        5px solid #95aab4;
+}
+
+.road::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    top:32px;
+
+    left:0;
+
+    border-top:
+        4px dashed white;
+}
+
+.car{
+
+    position:absolute;
+
+    left:-120px;
+
+    bottom:38px;
+
+    font-size:65px;
+
+    animation:
+        drive 5s linear infinite;
+
+    z-index:2;
+
+    filter:
+        drop-shadow(
+            0 7px 4px
+            rgba(
+                0,
+                0,
+                0,
+                .20
+            )
+        );
+}
+
+@keyframes drive{
+
+    0%{
+
+        left:-120px;
+    }
+
+    100%{
+
+        left:110%;
+    }
+}
+
+
+/* =====================================================
+   TARJETA DE ANTHONY
+===================================================== */
+
+.collector{
+
+    width:min(88%,430px);
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:25px;
+
+    box-shadow:
+
+        0 20px 45px
+        rgba(
+            70,
+            120,
+            145,
+            .18
+        );
+
+    transform:
+        rotate(-1deg);
+}
+
+.collector-inner{
+
+    border:
+        2px dashed #e5a2aa;
+
+    border-radius:18px;
+
+    padding:15px;
+}
+
+.collector-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:12px;
+}
+
+.logo{
+
+    color:#ed5267;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    font-style:italic;
+}
+
+.edition{
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    color:#8296a0;
+}
+
+.photo{
+
+    background:#eaf8ff;
+
+    padding:8px;
+
+    border-radius:15px;
+}
+
+.photo img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+
+    border-radius:10px;
+
+    display:block;
+}
+
+.names{
+
+    margin-top:15px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    color:#47758c;
+
+    font-size:25px;
+}
+
+.limited{
+
+    color:#dd6472;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    margin-top:5px;
+}
+
+
+/* =====================================================
+   PANTALLA DE ESPECIFICACIONES
+===================================================== */
+
+.spec-card{
+
+    width:min(
+        92%,
+        680px
+    );
+
+    max-height:92vh;
+
+    overflow:auto;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .93
+        );
+
+    border-radius:32px;
+
+    padding:
+        28px 25px;
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(
+            69,
+            130,
+            155,
+            .16
+        );
+}
+
+
+/* Título */
+
+.spec-card .small{
+
+    margin-bottom:8px;
+}
+
+
+/* FOTO DEL CARRITO */
+
+.car-photo{
+
+    width:min(
+        100%,
+        360px
+    );
+
+    height:210px;
+
+    margin:
+        10px auto 20px;
+
+    background:
+        #eaf8ff;
+
+    border-radius:22px;
+
+    padding:10px;
+
+    border:
+        1px solid #d9edf5;
+
+    box-shadow:
+
+        0 10px 25px
+        rgba(
+            80,
+            130,
+            150,
+            .10
+        );
+}
+
+.car-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    border-radius:15px;
+
+    display:block;
+}
+
+
+/* LÍNEA */
+
+.spec-line{
+
+    width:90%;
+
+    height:1px;
+
+    background:
+        #e8dfe0;
+
+    margin:
+        10px auto 20px;
+}
+
+
+/* ESPECIFICACIONES */
+
+.specs{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap:10px;
+
+    max-width:580px;
+
+    margin:auto;
+}
+
+.spec{
+
+    background:#f9fcfd;
+
+    border:
+        1px solid #e3edf1;
+
+    border-radius:15px;
+
+    padding:
+        14px 10px;
+}
+
+.spec span{
+
+    display:block;
+
+    color:#df8290;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+    margin-bottom:5px;
+}
+
+.spec strong{
+
+    color:#557483;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   CARTA
+===================================================== */
+
+.letter{
+
+    width:min(
+        92%,
+        650px
+    );
+
+    max-height:68vh;
+
+    overflow:auto;
+
+    background:#fffdf8;
+
+    border-radius:10px;
+
+    padding:
+        30px;
+
+    text-align:left;
+
+    box-shadow:
+
+        0 20px 45px
+        rgba(
+            60,
+            110,
+            130,
+            .13
+        );
+
+    border-left:
+        5px solid #ed7180;
+
+    position:relative;
+}
+
+.letter::after{
+
+    content:"♡";
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    color:#ed7180;
+
+    font-size:25px;
+}
+
+.letter p{
+
+    color:#6c818a;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:13px;
+}
+
+.signature{
+
+    color:#df5f70;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:22px;
+
+    text-align:right;
+
+    margin-top:20px;
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final-card{
+
+    width:min(
+        92%,
+        620px
+    );
+
+    min-height:560px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .92
+        );
+
+    border-radius:35px;
+
+    padding:
+        45px 25px;
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(
+            69,
+            130,
+            155,
+            .16
+        );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.big-heart{
+
+    font-size:75px;
+
+    margin-bottom:15px;
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,
+    100%{
+
+        transform:
+            scale(1);
+    }
+
+    50%{
+
+        transform:
+            scale(1.15);
+    }
+}
+
+.final-card h2{
+
+    color:#eb6374;
+
+    margin-bottom:15px;
+}
+
+.final-text{
+
+    color:#748891;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+    max-width:450px;
+}
+
+
+/* =====================================================
+   MUSICA
+===================================================== */
+
+.music{
+
+    position:fixed;
+
+    bottom:18px;
+
+    right:18px;
+
+    background:white;
+
+    border-radius:40px;
+
+    padding:
+        8px 14px 8px 8px;
+
+    display:none;
+
+    align-items:center;
+
+    gap:8px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            .12
+        );
+
+    z-index:100;
+
+    color:#718690;
+
+    font-size:11px;
+}
+
+.music button{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ed6677;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   CORAZONES
+===================================================== */
+
+.floating{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    z-index:20;
+
+    pointer-events:none;
+
+    animation:
+        float 5s linear forwards;
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:
+            translateY(0)
+            scale(.7);
+
+        opacity:0;
+    }
+
+    15%{
+
+        opacity:.8;
+    }
+
+    100%{
+
+        transform:
+            translateY(-110vh)
+            scale(1.3)
+            rotate(20deg);
+
+        opacity:0;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media(
+    max-width:600px
+){
+
+    .card{
+
+        padding:
+            35px 20px;
+    }
+
+    .photo img{
+
+        height:260px;
+    }
+
+    .spec-card{
+
+        padding:
+            25px 15px;
+    }
+
+    .car-photo{
+
+        height:160px;
+
+        margin-bottom:15px;
+    }
+
+    .specs{
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:8px;
+    }
+
+    .spec{
+
+        padding:
+            12px 6px;
+    }
+
+    .spec strong{
+
+        font-size:11px;
+    }
+
+    .letter{
+
+        max-height:58vh;
+
+        padding:
+            25px 20px;
+    }
+
+    .letter p{
+
+        font-size:14px;
+    }
+
+    .final-card{
+
+        min-height:
+            500px;
+
+        padding:
+            35px 20px;
+    }
+
+}
+
+
+/* celulares pequeños */
+
+@media(
+    max-height:700px
+){
+
+    .card{
+
+        padding:
+            25px 20px;
+    }
+
+    .photo img{
+
+        height:210px;
+    }
+
+    .car-photo{
+
+        height:140px;
+    }
+
+    .spec-card{
+
+        padding:
+            18px;
+    }
+
+    .button{
+
+        margin-top:18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- =====================================================
+     DECORACIONES
+===================================================== -->
+
+<div class="cloud cloud1"></div>
+
+<div class="cloud cloud2"></div>
+
+<div class="sparkle s1">
+    ✦
+</div>
+
+<div class="sparkle s2">
+    ✧
+</div>
+
+<div class="sparkle s3">
+    ✦
+</div>
+
+<div class="sparkle s4">
+    ✧
+</div>
+
+<!-- =====================================================
+     PANTALLA 1
+===================================================== -->
+
+<section
+    class="screen active"
+    id="screen1"
+>
+
+<div class="card">
+
+
+<h1>
+
+    Anthony
+    <span class="heart">
+        ♡
+    </span>
+
+</h1>
+
+<div class="date">
+
+    30 · 09 · 2026
+
+</div>
+
+<p class="text">
+
+    Tengo una pequeña sorpresa
+    preparada especialmente para ti.
+
+    <br><br>
+
+    ¿Listo para abrirla? 🏎️
+
+</p>
+
+<button
+    class="button"
+    onclick="nextScreen()"
+>
+
+    🏎️ ABRIR MI REGALO
+
+</button>
+```
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     PANTALLA 2
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen2"
+>
+
+<div class="card">
+
+```
+<div class="small">
+    DIA DE HOT WHEELS 
+</div>
+
+<h2>
+
+    Hoy quería darte
+    <span class="heart">
+        un Hot Wheels
+    </span>
+
+</h2>
+
+<p class="text">
+
+    Pero hay un pequeño detalle...
+
+    <br><br>
+
+    Estás lejos de mí. 🥹
+
+</p>
+
+
+<div class="car-area">
+
+    <div class="road"></div>
+
+    <div class="car">
+        🏎️
+    </div>
+
+</div>
+
+
+<p class="text">
+
+    Así que decidí dartelo 
+    uno de una manera diferente. ❤️
+
+</p>
+
+
+<button
+    class="button"
+    onclick="nextScreen()"
+>
+
+    CONTINUAR ♡
+
+</button>
+```
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     PANTALLA 3
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen3"
+>
+
+<div>
+
+```
+<div class="small">
+    MI AMOR  
+</div>
+
+<h2>
+
+    Tu pequeño
+    <span class="heart">
+        regalo
+    </span>
+
+</h2>
+
+
+<div class="collector">
+
+    <div class="collector-inner">
+
+
+        <div class="collector-top">
+
+            <div class="logo">
+                HOT WHEELS
+            </div>
+
+            <div class="edition">
+                EDICION ESPECIAL 
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="anto.jpeg"
+                alt="Anthony"
+                width: 350px;
+
+
+            >
+
+        </div>
+
+
+        <div class="names">
+
+            Anthony ♡ Nadia
+
+        </div>
+
+
+        <div class="limited">
+
+            UN AMOR PARA TODA LA VIDA 
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<button
+    class="button"
+    onclick="nextScreen()"
+>
+
+    VER ESPECIFICACIONES →
+
+</button>
+```
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     PANTALLA 4
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen4"
+>
+
+<div class="spec-card">
+
+```
+<div class="small">
+
+    ESPECIFICACIONES TÉCNICAS
+
+</div>
+
+
+<h2>
+
+    Anthony
+    <span class="heart">
+        Edición 
+    </span>
+
+</h2>
+
+
+<!-- FOTO DEL CARRITO -->
+
+<div class="car-photo">
+
+    <img
+        src="carrito.png"
+        alt="Hot Wheels"
+    >
+
+</div>
+
+
+<div class="spec-line"></div>
+
+
+<!-- ESPECIFICACIONES -->
+
+<div class="specs">
+
+
+    <div class="spec">
+
+        <span>
+            MODELO
+        </span>
+
+        <strong>
+            Anthony
+        </strong>
+
+    </div>
+
+
+    <div class="spec">
+
+        <span>
+            EDICIÓN
+        </span>
+
+        <strong>
+            Nadia ♡
+        </strong>
+
+    </div>
+
+
+    <div class="spec">
+
+        <span>
+            MOTOR
+        </span>
+
+        <strong>
+            Amor infinito
+        </strong>
+
+    </div>
+
+
+    <div class="spec">
+
+        <span>
+            COMBUSTIBLE
+        </span>
+
+        <strong>
+            Besitos y abrazos
+        </strong>
+
+    </div>
+
+
+    <div class="spec">
+
+        <span>
+            VELOCIDAD
+        </span>
+
+        <strong>
+            Directo hacia ti
+        </strong>
+
+    </div>
+
+
+    <div class="spec">
+
+        <span>
+            DISTANCIA
+        </span>
+
+        <strong>
+            0 km del corazón ❤️
+        </strong>
+
+    </div>
+
+
+</div>
+
+
+<button
+    class="button"
+    onclick="nextScreen()"
+>
+
+    HAY ALGO MÁS... →
+
+</button>
+```
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     PANTALLA 5
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen5"
+>
+
+<div>
+
+```
+<div class="small">
+    PARA TI ♡
+</div>
+
+<h2>
+
+    Una pequeña
+    <span class="heart">
+        carta
+    </span>
+
+</h2>
+
+
+<div class="letter">
+
+
+    <p>
+        Anthony, Amor de mi vida
+    </p>
+
+
+    <p>
+
+        Hoy es un dia muy especial
+        y quería darte un Hot Wheels,
+        pero como estás lejitos,
+        decidí buscar una manera diferente
+        de hacerte llegar mi regalo a mi estilo ing jeje
+
+    </p>
+
+
+    <p>
+
+        Aunque la distancia exista,
+        nunca te dejare ser espectador
+        
+    </p>
+
+    <p>
+
+        Dicen que los Hot Wheels son para coleccionar carros, 
+        pero yo creo que también son para recordar caminos y momentos,
+        hoy quiero recordarte el increible persona que eres
+        y si pudiera elegir un camino para recorrer una y otra vez.
+        elegiría cualquiera que me lleve hacia ti. 🥹❤️
+        
+        
+    </p>
+    <p>
+
+        Aunque hoy no pueda estar contigo,
+        quería que tuvieras un pequeño
+        recordatorio de que hay alguien
+        que piensa en ti y que siempre
+        encuentra una manera de estar
+        cerquita mi goido.
+
+    </p>
+
+
+    <p>
+
+        Espero que cuando veas esto
+        sonrías, porque esa era justamente
+        mi intención, recuerda tejamoooooooo por toda la vida. ❤️🏎️
+
+    </p>
+
+
+    <div class="signature">
+
+        Con amor,<br>
+
+        Nadia ♡
+
+    </div>
+
+
+</div>
+
+
+<button
+    class="button"
+    onclick="nextScreen()"
+>
+
+    ÚLTIMA SORPRESA ❤️
+
+</button>
+```
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     PANTALLA 6 — FINAL
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen6"
+>
+
+<div class="final-card">
+
+```
+<div class="big-heart">
+
+    ❤️
+
+</div>
+
+
+<div class="small">
+
+    DELIVERY COMPLETO 
+
+</div>
+
+
+<h2>
+
+    Anthony & Nadia
+
+</h2>
+
+
+<p class="final-text">
+
+    Muchos kilómetros de distancia...
+
+    <br><br>
+
+    pero cero kilómetros
+    entre nuestros corazones.
+
+</p>
+
+
+<!-- CARRITO -->
+
+<div class="car-area">
+
+    <div class="road"></div>
+
+    <div class="car">
+
+        🏎️
+
+    </div>
+
+</div>
+
+
+<p class="final-text">
+
+    30 · 09 · 2026
+
+</p>
+
+
+<br>
+
+
+<p
+    style="
+    color:#8a9da5;
+    font-size:12px;
+    "
+>
+
+   Tu inge fav Nadia 👩🏻‍💻
+
+</p>
+```
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     REPRODUCTOR
+===================================================== -->
+
+<div
+    class="music"
+    id="musicBox"
+>
+
+```
+<button
+    id="musicButton"
+    onclick="toggleMusic()"
+>
+
+    ▶
+
+</button>
+
+
+<span>
+
+    nuestra canción ♡
+
+</span>
+```
+
+</div>
+
+<!-- AUDIO -->
+
+<audio
+id="music"
+loop
+
+>
+
+```
+<source
+    src="https://www.youtube.com/watch?v=eOutGxgSAPA"
+    type="audio/mpeg"
+>
+```
+
+</audio>
+
+</div>
+
+<script>
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+let currentScreen = 1;
+
+const music =
+    document.getElementById(
+        "music"
+    );
+
+const musicBox =
+    document.getElementById(
+        "musicBox"
+    );
+
+const musicButton =
+    document.getElementById(
+        "musicButton"
+    );
+
+
+/* =====================================================
+   CAMBIAR DE PANTALLA
+===================================================== */
+
+function nextScreen(){
+
+
+    const current =
+        document.getElementById(
+            "screen" +
+            currentScreen
+        );
+
+
+    current.classList.remove(
+        "active"
+    );
+
+
+    current.classList.add(
+        "exit"
+    );
+
+
+    setTimeout(
+        function(){
+
+
+            current.style.display =
+                "none";
+
+
+            current.classList.remove(
+                "exit"
+            );
+
+
+            currentScreen++;
+
+
+            const next =
+                document.getElementById(
+                    "screen" +
+                    currentScreen
+                );
+
+
+            if(next){
+
+                next.style.display =
+                    "flex";
+
+
+                setTimeout(
+                    function(){
+
+                        next.classList.add(
+                            "active"
+                        );
+
+                    },
+                    30
+                );
+
+            }
+
+
+        },
+        600
+    );
+
+
+    createHeartBurst();
+
+
+    /* Música */
+
+    if(currentScreen === 1){
+
+        musicBox.style.display =
+            "flex";
+
+
+        music.play()
+            .then(
+                function(){
+
+                    musicButton.innerHTML =
+                        "❚❚";
+
+                }
+            )
+            .catch(
+                function(){
+
+                    musicButton.innerHTML =
+                        "▶";
+
+                }
+            );
+
+    }
+
+}
+
+
+/* =====================================================
+   MUSICA
+===================================================== */
+
+function toggleMusic(){
+
+
+    if(
+        music.paused
+    ){
+
+        music.play();
+
+        musicButton.innerHTML =
+            "❚❚";
+
+    }
+
+    else{
+
+        music.pause();
+
+        musicButton.innerHTML =
+            "▶";
+
+    }
+
+}
+
+
+/* =====================================================
+   CORAZONES
+===================================================== */
+
+function createHeartBurst(){
+
+
+    for(
+        let i=0;
+        i<8;
+        i++
+    ){
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "floating";
+
+
+        const symbols = [
+
+            "♡",
+            "♥",
+            "✦",
+            "💗"
+
+        ];
+
+
+        heart.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random()
+                    *
+                    symbols.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random()
+            *
+            100
+            +
+            "vw";
+
+
+        heart.style.color =
+            Math.random() > .5
+
+            ? "#ed6b7a"
+
+            : "#78b8d2";
+
+
+        heart.style.fontSize =
+
+            (
+                15
+                +
+                Math.random()
+                *
+                15
+            )
+            +
+            "px";
+
+
+        heart.style.animationDuration =
+
+            (
+                4
+                +
+                Math.random()
+                *
+                2
+            )
+            +
+            "s";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(
+            function(){
+
+                heart.remove();
+
+            },
+            6000
+        );
+
+    }
+
+}
+
+
+</script>
+
+</body>
+
+</html>
